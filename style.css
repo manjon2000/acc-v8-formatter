@@ -143,7 +143,9 @@ main {
     background-color: var(--border);
 }
 
-.clear-btn, .copy-btn {
+.clear-btn,
+.copy-btn,
+.fullscreen-btn {
     background: transparent;
     color: var(--primary);
     font-size: 0.75rem;
@@ -151,8 +153,31 @@ main {
     border: 1px solid transparent;
 }
 
-.clear-btn:hover, .copy-btn:hover {
+.clear-btn:hover,
+.copy-btn:hover,
+.fullscreen-btn:hover {
     border-color: var(--primary);
+}
+
+.pane-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Fullscreen Logic */
+.editor-pane.fullscreen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    background-color: var(--bg-color);
+}
+
+.editor-pane.fullscreen .pane-header {
+    height: 48px;
+    padding: 0 24px;
 }
 
 footer {

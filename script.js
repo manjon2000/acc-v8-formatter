@@ -183,3 +183,23 @@ function clearInput() {
     inputEditor.setValue('');
     outputEditor.setValue('');
 }
+
+function toggleFullscreen() {
+    const pane = document.querySelector('.editor-pane:last-child');
+    const btn = document.querySelector('.fullscreen-btn');
+
+    pane.classList.toggle('fullscreen');
+
+    if (pane.classList.contains('fullscreen')) {
+        btn.textContent = "Exit Full Screen";
+        document.body.style.overflow = "hidden";
+    } else {
+        btn.textContent = "Full Screen";
+        document.body.style.overflow = "";
+    }
+
+    // Trigger Monaco resize
+    setTimeout(() => {
+        outputEditor.layout();
+    }, 100);
+}

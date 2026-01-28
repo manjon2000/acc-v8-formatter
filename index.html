@@ -43,7 +43,10 @@
             <div class="editor-pane">
                 <div class="pane-header">
                     <span>Formatted Output</span>
-                    <button class="copy-btn" onclick="copyResult()">Copy Code</button>
+                    <div class="pane-actions">
+                        <button class="fullscreen-btn" onclick="toggleFullscreen()">Full Screen</button>
+                        <button class="copy-btn" onclick="copyResult()">Copy Code</button>
+                    </div>
                 </div>
                 <div id="outputEditor" class="editor"></div>
             </div>
