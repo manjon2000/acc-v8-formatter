@@ -198,8 +198,11 @@ function toggleFullscreen() {
         document.body.style.overflow = "";
     }
 
-    // Trigger Monaco resize
-    setTimeout(() => {
+    // Trigger Monaco resize with multiple attempts for safety
+    const resize = () => {
         outputEditor.layout();
-    }, 100);
+    };
+
+    setTimeout(resize, 50);
+    setTimeout(resize, 300);
 }

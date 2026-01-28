@@ -178,6 +178,12 @@ main {
 .editor-pane.fullscreen .pane-header {
     height: 48px;
     padding: 0 24px;
+    flex-shrink: 0;
+}
+
+.editor-pane.fullscreen .editor {
+    height: calc(100% - 48px);
+    width: 100%;
 }
 
 footer {
