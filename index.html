@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACC V8 Template Formatter | Premium Dev Tool</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/microsoft/monaco-editor/main/docs/assets/monaco.png">
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- External Libs -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify-html.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-beautify/1.14.7/beautify.min.js"></script>
+</head>
+
+<body class="dark-theme">
+    <header>
+        <div class="logo-area">
+            <div class="logo-icon">ACC</div>
+            <h1>V8 Template <span>Formatter</span></h1>
+        </div>
+        <div class="actions">
+            <button id="formatBtn" class="primary-btn">Format Template</button>
+            <button id="downloadBtn" class="secondary-btn">Download .html</button>
+        </div>
+    </header>
+
+    <main>
+        <div class="editor-container">
+            <div class="editor-pane">
+                <div class="pane-header">
+                    <span>Input HTML / ACC v8</span>
+                    <button class="clear-btn" onclick="clearInput()">Clear</button>
+                </div>
+                <div id="inputEditor" class="editor"></div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div class="editor-pane">
+                <div class="pane-header">
+                    <span>Formatted Output</span>
+                    <button class="copy-btn" onclick="copyResult()">Copy Code</button>
+                </div>
+                <div id="outputEditor" class="editor"></div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>Built for Adobe Campaign Classic Developers | Ported from Python to Web</p>
+    </footer>
+
+    <!-- Monaco Editor Loader -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.34.1/min/vs/loader.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
